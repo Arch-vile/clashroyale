@@ -1,0 +1,16 @@
+{
+  "name": "clashroyalestats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "influx": "^5.0.7",
+    "lodash": "^4.17.10"
+  }
+}

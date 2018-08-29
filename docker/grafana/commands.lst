@@ -1,0 +1,10 @@
+docker pull grafana/grafana
+heroku container:login
+heroku create
+#https://polar-cliffs-63289.herokuapp.com/
+docker build --tag mygrafana .
+docker run -d -p 3000:3000 mygrafana
+heroku container:push web --app polar-cliffs-63289
+heroku container:release web --app polar-cliffs-63289
+heroku open --app polar-cliffs-63289
+docker run -it --entrypoint /bin/bash mygrafana
