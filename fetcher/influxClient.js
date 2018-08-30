@@ -2,7 +2,7 @@ const Influx = require("influx");
 
 const influx = new Influx.InfluxDB({
   host: process.env.INFLUX_HOST,
-  protocol: "https",
+  protocol: process.env.INFLUX_PROTOCOL,
   username: process.env.INFLUX_USER,
   password: process.env.INFLUX_PASSWORD,
   port: process.env.INFLUX_PORT,
