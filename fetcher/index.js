@@ -7,6 +7,10 @@ function buildDeck(deck) {
   return deck.map(card => card.name + "::" + card.level).join(";;");
 }
 
+function deckLevel(deck) {
+	return 0;
+}
+
 axios.defaults.headers.get["Authorization"] = "Bearer " + TOKEN;
 axios
   .get("https://api.clashroyale.com/v1/clans/%23GGJJV2")
@@ -92,7 +96,8 @@ function fetchPlayer(tag) {
             "bestSeason.trophies",
             -1
           ),
-          currentDeck: buildDeck(response.data.currentDeck)
+          currentDeck: buildDeck(response.data.currentDeck),
+		deckLevel: 0
         }
       };
 

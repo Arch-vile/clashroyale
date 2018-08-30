@@ -35,7 +35,8 @@ const influx = new Influx.InfluxDB({
         leaguePreviousTrophiesBest: Influx.FieldType.INTEGER,
         leagueBestId: Influx.FieldType.STRING,
         leagueBestTrophies: Influx.FieldType.INTEGER,
-        currentDeck: Influx.FieldType.STRING
+        currentDeck: Influx.FieldType.STRING,
+	      deckLevel: Influx.FieldType.INTEGER
       },
       tags: ["playerTag", "name", "role", "clanTag", "clanName", "arenaName"]
     }
