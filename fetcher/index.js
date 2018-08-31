@@ -1,7 +1,7 @@
 const lodash = require("lodash");
 const axios = require("axios");
 const influxClient = require("./influxClient");
-const TOKEN = process.env.API_TOKEN;
+const TOKEN = process.env.CR_API_TOKEN;
 
 function buildDeck(deck) {
   return deck.map(card => card.name + "::" + card.level).join(";;");
